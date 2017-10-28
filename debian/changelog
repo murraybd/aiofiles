@@ -1,5 +1,5 @@
 aiofiles (0.3.2-1) unstable; urgency=low
 
-  * Initial release. Closes: #nnnn
+  * Initial release. Closes: #880030
 
  -- David Steele <steele@debian.org>  Sat, 28 Oct 2017 10:06:32 -0400
