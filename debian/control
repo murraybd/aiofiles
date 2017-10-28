@@ -1,0 +1,16 @@
+Source: aiofiles
+Section: python
+Priority: optional
+Maintainer: David Steele <steele@debian.org>
+Build-Depends: debhelper (>=9), dh-python, python3-all, python3-setuptools
+Standards-Version: 4.1.1
+Homepage: https://github.com/Tinche/aiofiles
+X-Python3-Version: >= 3.2
+
+Package: python3-aiofiles
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: support for Python asyncio file operations
+ This module includes support for asynchronous file
+ operations using the Python asyncio module.
