@@ -1,3 +1,9 @@
+aiofiles (0.3.2-3) unstable; urgency=medium
+
+  * Add Vcs header lines to control.
+
+ -- David Steele <steele@debian.org>  Sun, 24 Dec 2017 15:32:02 -0500
+
 aiofiles (0.3.2-2) unstable; urgency=medium
 
   * Add a python dependency.
