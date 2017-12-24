@@ -3,7 +3,7 @@ Section: python
 Priority: optional
 Maintainer: David Steele <steele@debian.org>
 Build-Depends: debhelper (>=10), dh-python, python3-all, python3-setuptools
-Standards-Version: 4.1.1
+Standards-Version: 4.1.2
 Homepage: https://github.com/Tinche/aiofiles
 Vcs-Browser: https://github.com/davesteele/aiofiles/tree/debian
 Vcs-Git: https://github.com/davesteele/aiofiles.git -b debian
