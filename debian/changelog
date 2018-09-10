@@ -1,8 +1,8 @@
-aiofiles (0.4.0-1) UNRELEASED; urgency=medium
+aiofiles (0.4.0-1) unstable; urgency=medium
 
   * New upstream version.
 
- -- David Steele <steele@debian.org>  Wed, 05 Sep 2018 12:39:45 -0400
+ -- David Steele <steele@debian.org>  Mon, 10 Sep 2018 18:40:35 -0400
 
 aiofiles (0.3.2-3) unstable; urgency=medium
 
