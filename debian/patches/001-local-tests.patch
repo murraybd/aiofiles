@@ -1,0 +1,38 @@
+commit fa9285a280e7b8a8d2bfe6d024e9b8a51416209c
+Author: David Steele <steele@debian.org>
+Date:   Thu Sep 13 13:14:28 2018 -0400
+
+    Get "python3 setup.py test" working
+
+diff --git a/pytest.ini b/pytest.ini
+new file mode 100644
+index 0000000..5ee6477
+--- /dev/null
++++ b/pytest.ini
+@@ -0,0 +1,2 @@
++[pytest]
++testpaths = tests
+diff --git a/setup.cfg b/setup.cfg
+new file mode 100644
+index 0000000..b7e4789
+--- /dev/null
++++ b/setup.cfg
+@@ -0,0 +1,2 @@
++[aliases]
++test=pytest
+diff --git a/setup.py b/setup.py
+index bfea9cb..b8d07fe 100644
+--- a/setup.py
++++ b/setup.py
+@@ -31,6 +31,8 @@ setup(
+     author_email='tinchester@gmail.com',
+     description='File support for asyncio.',
+     long_description=readme,
++    setup_requires=['pytest-runner'],
++    tests_require=['pytest', 'pytest-asyncio'],
+     classifiers=[
+         "Development Status :: 4 - Beta",
+         "Intended Audience :: Developers",
+diff --git a/tests/__init__.py b/tests/__init__.py
+new file mode 100644
+index 0000000..e69de29
