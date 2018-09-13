@@ -2,7 +2,14 @@ Source: aiofiles
 Section: python
 Priority: optional
 Maintainer: David Steele <steele@debian.org>
-Build-Depends: debhelper (>=10), dh-python, python3-all, python3-setuptools
+Build-Depends:
+    debhelper (>=10),
+    dh-python,
+    python3-all,
+    python3-setuptools,
+    python3-pytest,
+    python3-pytest-asyncio,
+    python3-pytest-runner,
 Standards-Version: 4.1.2
 Homepage: https://github.com/Tinche/aiofiles
 Vcs-Browser: https://github.com/davesteele/aiofiles/tree/debian
