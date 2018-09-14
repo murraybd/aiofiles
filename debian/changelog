@@ -1,3 +1,9 @@
+aiofiles (0.4.0-2) unstable; urgency=medium
+
+  * Add unittests to build/ci.
+
+ -- David Steele <steele@debian.org>  Thu, 13 Sep 2018 21:46:39 -0400
+
 aiofiles (0.4.0-1) unstable; urgency=medium
 
   * New upstream version.
