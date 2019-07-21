@@ -1,3 +1,4 @@
 .pytest_cache/
 aiofiles.egg-info/
 .eggs/
+.pc/
