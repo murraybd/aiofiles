@@ -1,4 +1,4 @@
 Tests: runtest.py
 
 Tests: unittests.py
-Depends: @, @builddeps@
+Depends: @, @builddeps@, tox
