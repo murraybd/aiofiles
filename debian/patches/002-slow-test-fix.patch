@@ -1,8 +1,0 @@
---- a/tests/threadpool/test_concurrency.py
-+++ b/tests/threadpool/test_concurrency.py
-@@ -79,4 +79,4 @@
-     spam_task.cancel()
- 
-     assert actual_contents == contents
--    assert counter > 40
-+    assert counter > 10
