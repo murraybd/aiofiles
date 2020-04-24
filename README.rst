@@ -10,6 +10,10 @@ aiofiles: file support for asyncio
 .. image:: https://codecov.io/gh/Tinche/aiofiles/branch/master/graph/badge.svg
         :target: https://codecov.io/gh/Tinche/aiofiles
 
+.. image:: https://img.shields.io/pypi/pyversions/aiofiles.svg
+        :target: https://github.com/Tinche/aiofiles
+        :alt: Supported Python versions
+
 **aiofiles** is an Apache2 licensed library, written in Python, for handling local
 disk files in asyncio applications.
 
@@ -88,6 +92,10 @@ several useful ``os`` functions that deal with files:
 
 * ``stat``
 * ``sendfile``
+* ``rename``
+* ``remove``
+* ``mkdir``
+* ``rmdir``
 
 Writing tests for aiofiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,6 +121,13 @@ as desired. The return type also needs to be registered with the
 
 History
 ~~~~~~~
+
+0.5.0 (2020-04-12)
+``````````````````
+- Python 3.8 support. Code base modernization (using ``async/await`` instead of ``asyncio.coroutine``/``yield from``).
+- Added ``aiofiles.os.remove``, ``aiofiles.os.rename``, ``aiofiles.os.mkdir``, ``aiofiles.os.rmdir``.
+  `#62 <https://github.com/Tinche/aiofiles/pull/62>`_
+
 
 0.4.0 (2018-08-11)
 ``````````````````
