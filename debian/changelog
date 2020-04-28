@@ -5,6 +5,7 @@ aiofiles (0.5.0-1) UNRELEASED; urgency=medium
 
   [ Debian Janitor ]
   * Bump debhelper from old 10 to 12.
+  * Set debhelper-compat version in Build-Depends.
 
  -- David Steele <steele@debian.org>  Fri, 24 Apr 2020 08:51:35 -0400
 
