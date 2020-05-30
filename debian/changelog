@@ -1,4 +1,4 @@
-aiofiles (0.5.0-1) UNRELEASED; urgency=medium
+aiofiles (0.5.0-1) unstable; urgency=medium
 
   [ David Steele ]
   * New upstream version.
@@ -10,7 +10,7 @@ aiofiles (0.5.0-1) UNRELEASED; urgency=medium
     Repository-Browse.
   * Update standards version to 4.5.0, no changes needed.
 
- -- David Steele <steele@debian.org>  Fri, 24 Apr 2020 08:51:35 -0400
+ -- David Steele <steele@debian.org>  Sat, 30 May 2020 12:44:04 -0400
 
 aiofiles (0.4.0-3) unstable; urgency=medium
 
