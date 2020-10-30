@@ -122,6 +122,15 @@ as desired. The return type also needs to be registered with the
 History
 ~~~~~~~
 
+0.6.0 (2020-10-27)
+``````````````````
+- `aiofiles` is now tested on ppc64le.
+- Added `name` and `mode` properties to async file objects.
+  `#82 <https://github.com/Tinche/aiofiles/pull/82>`_
+- Fixed a DeprecationWarning internally.
+  `#75 <https://github.com/Tinche/aiofiles/pull/75>`_
+- Python 3.9 support and tests.
+
 0.5.0 (2020-04-12)
 ``````````````````
 - Python 3.8 support. Code base modernization (using ``async/await`` instead of ``asyncio.coroutine``/``yield from``).
