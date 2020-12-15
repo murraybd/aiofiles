@@ -2,3 +2,5 @@
 aiofiles.egg-info/
 .eggs/
 .pc/
+.tox/
+tests/.coverage

@@ -1,3 +1,9 @@
+aiofiles (0.6.0-2) unstable; urgency=medium
+
+  * Fix autopkg tests to run across Python versions.
+
+ -- David Steele <steele@debian.org>  Tue, 15 Dec 2020 08:48:00 -0500
+
 aiofiles (0.6.0-1) unstable; urgency=medium
 
   * New upstream version.
