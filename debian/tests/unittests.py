@@ -1,3 +1,3 @@
 #!/bin/sh
 
-tox -e py38
+py.test-3
