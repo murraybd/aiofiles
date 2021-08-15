@@ -4,3 +4,4 @@ aiofiles.egg-info/
 .pc/
 .tox/
 tests/.coverage
+excuses.yaml
