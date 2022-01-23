@@ -5,3 +5,4 @@ aiofiles.egg-info/
 .tox/
 tests/.coverage
 excuses.yaml
+.pybuild/
