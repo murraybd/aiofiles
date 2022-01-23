@@ -5,6 +5,7 @@ Maintainer: David Steele <steele@debian.org>
 Build-Depends:
     debhelper-compat (= 12),
     dh-python,
+    dh-python-pep517,
     python3-all,
     python3-toml,
     python3-poetry-core,
