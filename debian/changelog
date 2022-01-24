@@ -1,8 +1,9 @@
-aiofiles (0.7.0-1) UNRELEASED; urgency=medium
+aiofiles (0.8.0-1) unstable; urgency=medium
 
   * New upstream version.
+  * Builds using poetry (Closes: #995079)
 
- -- David Steele <steele@debian.org>  Sat, 14 Aug 2021 17:24:26 -0400
+ -- David Steele <steele@debian.org>  Sun, 23 Jan 2022 20:52:59 -0500
 
 aiofiles (0.6.0-2) unstable; urgency=medium
 
