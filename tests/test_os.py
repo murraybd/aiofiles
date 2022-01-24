@@ -49,9 +49,34 @@ async def test_rename():
     assert exists(old_filename) and exists(new_filename) is False
 
 
+@pytest.mark.asyncio
+async def test_replace():
+    """Test the replace call."""
+    old_filename = join(dirname(__file__), "resources", "test_file1.txt")
+    new_filename = join(dirname(__file__), "resources", "test_file2.txt")
+
+    await aiofiles.os.replace(old_filename, new_filename)
+    assert exists(old_filename) is False and exists(new_filename)
+    await aiofiles.os.replace(new_filename, old_filename)
+    assert exists(old_filename) and exists(new_filename) is False
+
+    with open(new_filename, "w") as f:
+        f.write("Test file")
+    assert exists(old_filename) and exists(new_filename)
+
+    await aiofiles.os.replace(old_filename, new_filename)
+    assert exists(old_filename) is False and exists(new_filename)
+    await aiofiles.os.replace(new_filename, old_filename)
+    assert exists(old_filename) and exists(new_filename) is False
+
+
 @pytest.mark.skipif(
     "2.4" < platform.release() < "2.6.33",
     reason="sendfile() syscall doesn't allow file->file",
+)
+@pytest.mark.skipif(
+    platform.system() == "Darwin",
+    reason="sendfile() doesn't work on mac",
 )
 @pytest.mark.asyncio
 async def test_sendfile_file(tmpdir):
@@ -103,9 +128,7 @@ async def test_sendfile_socket(unused_tcp_port):
 
     server = await asyncio.start_server(serve_file, port=unused_tcp_port)
 
-    reader, writer = await asyncio.open_connection(
-        "127.0.0.1", unused_tcp_port
-    )
+    reader, writer = await asyncio.open_connection("127.0.0.1", unused_tcp_port)
     actual_contents = await reader.read()
     writer.close()
 
@@ -113,3 +136,75 @@ async def test_sendfile_socket(unused_tcp_port):
     server.close()
 
     await server.wait_closed()
+
+
+@pytest.mark.asyncio
+async def test_exists():
+    """Test path.exists call."""
+    filename = join(dirname(__file__), "resources", "test_file1.txt")
+    result = await aiofiles.os.path.exists(filename)
+    assert result
+
+
+@pytest.mark.asyncio
+async def test_isfile():
+    """Test path.isfile call."""
+    filename = join(dirname(__file__), "resources", "test_file1.txt")
+    result = await aiofiles.os.path.isfile(filename)
+    assert result
+
+
+@pytest.mark.asyncio
+async def test_isdir():
+    """Test path.isdir call."""
+    filename = join(dirname(__file__), "resources")
+    result = await aiofiles.os.path.isdir(filename)
+    assert result
+
+
+@pytest.mark.asyncio
+async def test_getsize():
+    """Test path.getsize call."""
+    filename = join(dirname(__file__), "resources", "test_file1.txt")
+    result = await aiofiles.os.path.getsize(filename)
+    assert result == 10
+
+
+@pytest.mark.asyncio
+async def test_samefile():
+    """Test path.samefile call."""
+    filename = join(dirname(__file__), "resources", "test_file1.txt")
+    result = await aiofiles.os.path.samefile(filename, filename)
+    assert result
+
+
+@pytest.mark.asyncio
+async def test_sameopenfile():
+    """Test path.samefile call."""
+    filename = join(dirname(__file__), "resources", "test_file1.txt")
+    result = await aiofiles.os.path.samefile(filename, filename)
+    assert result
+
+
+@pytest.mark.asyncio
+async def test_getmtime():
+    """Test path.getmtime call."""
+    filename = join(dirname(__file__), "resources", "test_file1.txt")
+    result = await aiofiles.os.path.getmtime(filename)
+    assert result
+
+
+@pytest.mark.asyncio
+async def test_getatime():
+    """Test path.getatime call."""
+    filename = join(dirname(__file__), "resources", "test_file1.txt")
+    result = await aiofiles.os.path.getatime(filename)
+    assert result
+
+
+@pytest.mark.asyncio
+async def test_getctime():
+    """Test path. call."""
+    filename = join(dirname(__file__), "resources", "test_file1.txt")
+    result = await aiofiles.os.path.getctime(filename)
+    assert result

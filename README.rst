@@ -102,9 +102,20 @@ several useful ``os`` functions that deal with files:
 * ``stat``
 * ``sendfile``
 * ``rename``
+* ``replace``
 * ``remove``
 * ``mkdir``
+* ``makedirs``
 * ``rmdir``
+* ``removedirs``
+* ``path.exists``
+* ``path.isfile``
+* ``path.isdir``
+* ``path.getsize``
+* ``path.getatime``
+* ``path.getctime``
+* ``path.samefile``
+* ``path.sameopenfile``
 
 Tempfile
 ~~~~~~~~
@@ -154,6 +165,16 @@ as desired. The return type also needs to be registered with the
 
 History
 ~~~~~~~
+0.8.0 (2021-11-27)
+``````````````````
+* aiofiles is now tested on Python 3.10.
+* Added ``aiofiles.os.replace``.
+  `#107 <https://github.com/Tinche/aiofiles/pull/107>`_
+* Added ``aiofiles.os.{makedirs, removedirs}``.
+* Added ``aiofiles.os.path.{exists, isfile, isdir, getsize, getatime, getctime, samefile, sameopenfile}``.
+  `#63 <https://github.com/Tinche/aiofiles/pull/63>`_
+* Added `suffix`, `prefix`, `dir` args to ``aiofiles.tempfile.TemporaryDirectory``.
+  `#116 <https://github.com/Tinche/aiofiles/pull/116>`_
 
 0.7.0 (2021-05-17)
 ``````````````````
